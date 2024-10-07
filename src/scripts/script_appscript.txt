@@ -1,0 +1,17 @@
+function doGet(e) {
+  return ContentService.createTextOutput("Método GET não suportado").setMimeType(ContentService.MimeType.TEXT);
+}
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var row = [];
+  row.push(new Date());
+  row.push(e.parameter.nome);
+  row.push(e.parameter.email);
+  row.push(e.parameter.whatsapp);
+  sheet.appendRow(row);
+
+  var output = ContentService.createTextOutput("Dados recebidos com sucesso!");
+  output.setMimeType(ContentService.MimeType.TEXT);
+  return output;
+}
