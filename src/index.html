@@ -37,7 +37,7 @@
         document.getElementById("meuFormulario").onsubmit = function(event) {
             event.preventDefault();
             const formData = new FormData(event.target);
-            fetch('https://script.google.com/macros/s/AKfycbw8eZnn5_jiMPa-BkXRxONA2u1_QXG6wbZWiomUqW0sukTtYIW-SBhkwSeZ-NBCElLB/exec', {
+            fetch('URL do App Web Google AQUI!', {
                 method: 'POST',
                 body: formData,
             }).then(response => response.text()).then(data => {
